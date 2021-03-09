@@ -9,11 +9,13 @@ CONSIDERAÇÕES:
 2 - CASO HABILITAR (DESCOMENTAR) A AUTENTICAÇÃO, BASTA FAZER O REGISTRO(img1) E LOGIN(img2) PELO POSTMAN:
 
 
-<img1>
+<span>Img1</span>
+  
 ![](https://user-images.githubusercontent.com/19677312/110488040-e5adfa00-80cc-11eb-98a4-04a522c8ef99.PNG)
 
 <p>
 
-<img1>
+<span>Img1</span>
+  
 ![](https://user-images.githubusercontent.com/19677312/110488110-f52d4300-80cc-11eb-9b16-e6270c5c3ea4.PNG)
 
