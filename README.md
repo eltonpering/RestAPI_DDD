@@ -13,7 +13,7 @@ CONSIDERAÇÕES:
   
 ![](https://user-images.githubusercontent.com/19677312/110488040-e5adfa00-80cc-11eb-98a4-04a522c8ef99.PNG)
 
-<p>
+<p style="margin-top: 2.5em;>
 
 <span>Img1</span>
   
