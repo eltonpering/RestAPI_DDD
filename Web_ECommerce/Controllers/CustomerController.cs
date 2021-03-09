@@ -1,5 +1,4 @@
-﻿using ApplicationApp.Interfaces;
-using Entities.Entities;
+﻿using Entities.Entities;
 using Infrastructure.Configuration;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

@@ -1,14 +1,8 @@
-﻿using ApplicationApp.Interfaces;
-using Domain.Interfaces.InterfaceCustomer;
-using Domain.Interfaces.InterfaceServices;
-using Domain.Services;
-using Entities.Entities;
+﻿using Entities.Entities;
 using Infrastructure.Configuration;
-using Infrastructure.Repository.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using Web_ECommerce.Controllers;
 using Xunit;
 
