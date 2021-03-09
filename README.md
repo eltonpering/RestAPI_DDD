@@ -1,10 +1,18 @@
 # RestAPI_DDD
 
-CONSIDERAÇÕES:
+## CONSIDERAÇÕES:
+
+--------------------------------------------------------------------------------------------------------
+
+SWAGGER : https://localhost:5001/swagger/index.html
+
+--------------------------------------------------------------------------------------------------------
 
 1 - INICIALMENTE A AUTENTICAÇÃO ESTÁ DESABILITADA:
 
 ![](https://user-images.githubusercontent.com/19677312/110487032-f316b480-80cb-11eb-9a34-020e67d227a4.PNG) 
+
+--------------------------------------------------------------------------------------------------------
 
 2 - CASO HABILITAR (DESCOMENTAR) A AUTENTICAÇÃO, BASTA FAZER O REGISTRO(img1) E LOGIN(img2) PELO POSTMAN:
 
@@ -13,8 +21,8 @@ CONSIDERAÇÕES:
   
 ![](https://user-images.githubusercontent.com/19677312/110488040-e5adfa00-80cc-11eb-98a4-04a522c8ef99.PNG)
 
-<p style="margin-top: 100px;">
 
+--------------------------------------------------------------------------------------------------------
 
 <p><span>Img2</span></p>
   
