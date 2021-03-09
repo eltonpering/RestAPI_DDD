@@ -1,5 +1,4 @@
-﻿using ApplicationApp.DTOs;
-using Entities.Entities;
+﻿using Entities.Entities;
 using FluentAssertions;
 using Infrastructure.Configuration;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +11,7 @@ namespace UnitTestRestAPI
 {
     public class AddressUnitTestController
     {
-        public readonly ContextBase _ContextBase;       
+        public readonly ContextBase _ContextBase;
 
         public static DbContextOptions<ContextBase> dbContextOptions { get; }
 
@@ -32,6 +31,7 @@ namespace UnitTestRestAPI
 
 
             //Popular registros no banco de dados
+            //COMENTAR AS DUAS LINHA ABAIXO APOS PRIMEIRA EXECUÇÃO, POIS O BD ESTARÁ POPULADO
             DBUnitTestsMockInitializer db = new DBUnitTestsMockInitializer();
             db.Seed(context);
         }

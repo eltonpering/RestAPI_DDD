@@ -1,4 +1,5 @@
-﻿using Entities.Entities;
+﻿using ApplicationApp.Interfaces;
+using Entities.Entities;
 using Infrastructure.Configuration;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,11 +14,11 @@ namespace Web_ECommerce.Controllers
     [ApiController]
     public class CustomerController : Controller
     {
-        public readonly ContextBase _ContextBase;
+        public readonly ContextBase _ContextBase;        
 
         public CustomerController(ContextBase contexto)
         {
-            _ContextBase = contexto;
+            _ContextBase = contexto;            
         }
 
         // api/customer
@@ -25,7 +26,7 @@ namespace Web_ECommerce.Controllers
         public ActionResult<IEnumerable<Customer>> Get()
         {
             try
-            {
+            {   
                 return _ContextBase.Customer.Include(x => x.AddressCustomer).Include(x => x.PhoneCustomer).ToList();
             }
             catch (System.Exception)
