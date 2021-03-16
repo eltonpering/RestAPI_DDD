@@ -1,4 +1,5 @@
-﻿using Entities.Entities;
+﻿using ApplicationApp.DTOs;
+using Entities.Entities;
 using Infrastructure.Configuration;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -60,15 +61,23 @@ namespace Web_ECommerce.Controllers
 
         // api/customer
         [HttpPost]
-        public ActionResult Post([FromBody] Customer customer)
+        public ActionResult Post([FromBody] CustomerDTO customer)
         {
             try
             {
-                _ContextBase.Customer.Add(customer);
+                if (customer == null)
+                    return NotFound();
+
+                var newCustomer = new Customer
+                {
+                    Id = customer.Id,
+                    Name = customer.Name
+                };
+
+                _ContextBase.Customer.Add(newCustomer);
                 _ContextBase.SaveChanges();
 
-                return new CreatedAtRouteResult("GetCustomer",
-                    new { id = customer.Id }, customer);
+                return Ok("Customer Successfully registered!");
             }
             catch (System.Exception)
             {
@@ -78,20 +87,25 @@ namespace Web_ECommerce.Controllers
         }
 
         // api/customer/1
-        [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] Customer customer)
+        [HttpPut]
+        public ActionResult Put(int id, [FromBody] CustomerDTO customer)
         {
 
             try
             {
-                if (id != customer.Id)
-                {
-                    return BadRequest($"The Customer could not be updated with id ={id}");
-                }
 
-                _ContextBase.Entry(customer).State = EntityState.Modified;
+                if (customer == null)
+                    return NotFound();
+
+                var modifyCustomer = new Customer
+                {
+                    Id = customer.Id,
+                    Name = customer.Name
+                };
+
+                _ContextBase.Customer.Update(modifyCustomer);                
                 _ContextBase.SaveChanges();
-                return Ok();
+                return Ok("Customer Updated successfully!");
             }
             catch (System.Exception)
             {
